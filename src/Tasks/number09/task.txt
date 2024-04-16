@@ -1,0 +1,66 @@
+12:16
+:mega: Шановні слухачі, @channel Пропонуємо дев'яте практичне завдання під час співбесіди!Спробуйте написати три класи під назвами Triangle, TriangleReader, TriangleService. Дані класи мають задовольняти наступні умови:
+
+    Triangle:
+
+    Має містити поля a, b, c що відповідають сторонам трикутника;
+    Не має містити жодних перевірок та додаткової логіки;
+
+    TriangleService:
+
+    Має містити один метод double calculateArea(Triangle triangle);
+    Даний метод має обчислювати площу трикутника використовуючи формулу Герона та повертати результат обчислення площі;
+
+    TriangleReader:
+
+    Ввід значень має відбуватися через сканер;
+    Має містити метод Triangle readTriangle();
+    Має містити перевірки, чи сторона є від’ємною. У такому разі необхідно надати користувачу можливість ввести сторону знову
+    Має містити перевірку, чи з заданих сторін можна побудувати трикутник (тобто чи кожна сторона менша за суму решти). У такому разі необхідно надати користувачу можливість ввести усі сторони знову;
+
+    Загальні вимоги:
+
+    Кожен метод має виконувати лише одне призначення.
+
+Приклад роботи програми:
+
+Please enter size of side 'a': 0
+Triangle side should be a positive number, please try again:
+Please enter size of side 'a': -1
+Triangle side should be a positive number, please try again:
+Please enter size of side 'a': 3
+Please enter size of side 'b': 4
+Please enter size of side 'c': 9
+Each side should be less than sum of two others, please try again:
+Please enter size of side 'a': 3
+Please enter size of side 'b': 4
+Please enter size of side 'c': 5
+Area of triangle with side 'a' = 3.0, 'b' = 4.0, 'c' = 5.0 is 6.0
+
+Пропоную, стартовий код. Вам потрібно запропонувати частину, яка має бути додана замість “ //PUT YOUR CODE HERE”
+
+public class Main {
+
+   public static void main(String[] args) {
+       TriangleReader triangleReader = new TriangleReader();
+       TriangleService triangleService = new TriangleService();
+
+       Triangle triangle = triangleReader.readTriangle();
+       double area = triangleService.calculateArea(triangle);
+
+       System.out.println("Area of triangle with side 'a' = " + triangle.sideA + ", 'b' = " + triangle.sideB
+               + ", 'c' = " + triangle.sideC + " is " + area);
+   }
+}
+
+public class TriangleService {
+   //PUT YOUR CODE HERE
+}
+
+public class TriangleReader {
+   //PUT YOUR CODE HERE
+}
+
+public class Triangle {
+   //PUT YOUR CODE HERE
+}

@@ -1,0 +1,42 @@
+У масивів є доволі багато переваг, проте є і один недолік: масиви мають обмежений розмір. Спробуйте написати клас під назвою InfinityArray що буде вирішувати цю проблему. Даний клас має відповідати наступним вимогам:
+
+    Має зберігати числа (типу int), при чому гарантується що їх кількість елементів масиву не перевищує MaxInt;
+    Має містити поле innerArray (масив типу int), яке буде змінюватися в залежності від поточної кількості елементів (тобто, якщо елементи “не поміщаються” в даний масив, то має створюватися новий масив, звісно більшого розміру, щоб забезпечити збереження потрібної кількості елементів);
+    Має містити поле size з поточною кількістю елементів у нескінченному масиві;
+    Має містити метод int get(int index), що повертає елемент за індексом, якщо під цим індексом немає елемента, має повертати значення ‘-1’;
+    Має містити метод void add(int element) що додає елемент за індексом, який є найменший з незайнятих, при цьому мають відбутися зміни як поля innerArray так і поля size ;
+    Для виконання даного завдання не використовуйте жодні імпорти крім класу Scanner;
+    Клас InfinityArray не має містити жодних інших методів крім get та add.
+
+Для того щоб продемонструвати роботу даного масиву, спробуйте використати його для збереження та виведення довільної кількості (number) квадратів індексів елементів.Приклад роботи програми для різних значень number:Please enter count of elements: 4
+Element with number 0 equals 0
+Element with number 1 equals 1
+Element with number 2 equals 4
+Element with number 3 equals 9
+Element with number -3 equals -1Пропоную, стартовий код. Вам потрібно запропонувати частину, яка має бути додана замість “ //PUT YOUR CODE HERE”
+
+import java.util.Scanner;
+
+public class Main {
+   public static void main(String[] args) {
+       System.out.print("Please enter count of elements: ");
+       Scanner scanner = new Scanner(System.in);
+       int number = scanner.nextInt();
+
+       InfinityArray infinityArray = new InfinityArray();
+
+       for (int i = 0; i < number; i++) {
+           infinityArray.add(i * i);
+       }
+
+       for (int i = 0; i < number; i++) {
+           System.out.println("Element with number " + i + " equals " + infinityArray.get(i));
+       }
+
+       System.out.println("Element with number -3 equals " + infinityArray.get(-3));
+   }
+}
+
+public class InfinityArray {
+   //PUT YOUR CODE HERE
+}
