@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 public class Main {
     static String PASSWORD = "default";
     static Scanner SCANNER = new Scanner(System.in);
-    static String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._%-]+\\.[a-zA-Z]{2,}$     ";
+    static String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._%-]+\\.[a-zA-Z]{2,}$";
 
 
     public static void main(String[] args) {
@@ -35,6 +35,7 @@ public class Main {
         for (int i = 0; i < 3; i++) {
             System.out.print("Password: ");
             String input = SCANNER.nextLine();
+
             if (PASSWORD.equals(input)) {
                 accepted = true;
                 break;
@@ -42,7 +43,9 @@ public class Main {
                 System.out.println("Access denied. Please check your password.");
             }
         }
+
         System.out.println(accepted ? "Welcome to the Magic Vet!" : "Application has been blocked.");
+
         return accepted;
     }
 
@@ -52,7 +55,7 @@ public class Main {
         String email = SCANNER.nextLine();
 
         if (isEmailValid(email)) {
-            Client client = buildClient(email);
+            Client2 client = buildClient(email);
             System.out.println("New clien: " + client.firstName + " " + client.lastName + " " + client.email);
         } else {
             System.out.println("Provided client is invalid");
@@ -65,8 +68,8 @@ public class Main {
         return matcher.matches();
     }
 
-    static Client buildClient (String email) {
-        Client client = new Client();
+    static Client2 buildClient (String email) {
+        Client2 client = new Client2();
         client.email = email;
 
         System.out.println("First name ");
@@ -77,4 +80,11 @@ public class Main {
 
         return client;
     }
+}
+
+
+class Client {
+    String firstName;
+    String lastName;
+    String email;
 }
