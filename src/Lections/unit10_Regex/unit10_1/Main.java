@@ -1,4 +1,4 @@
-package Lections.unit10_Reg.unit10_1;
+package Lections.unit10_Regex.unit10_1;
 public class Main {
 
     /*

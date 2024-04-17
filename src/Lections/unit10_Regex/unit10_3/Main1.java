@@ -1,4 +1,4 @@
-package Lections.unit10_Reg.unit10_3;
+package Lections.unit10_Regex.unit10_3;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
