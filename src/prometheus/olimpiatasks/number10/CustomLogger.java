@@ -1,99 +1,61 @@
 package prometheus.olimpiatasks.number10;
 
+
 import java.util.Date;
 
 public class CustomLogger {
+    static int DEBUG_MODE = 0;
+    static int INFO_MODE = 1;
+    static int WARN_MODE = 2;
+    static int ERROR_MODE = 3;
 
-    //PUT YOUR CODE HERE
+    String loggerName;
+    int mode;
 
-    public static final int DEBUG_MODE = 0;
-    public static final int INFO_MODE = 1;
-    public static final int WARN_MODE = 2;
-    public static final int ERROR_MODE = 3;
-
-    private final String loggerName;
-    private final int logLevel;
-
-
-    CustomLogger (String logerName, int logLevel) {
-        this.loggerName = logerName;
-        this.logLevel = logLevel;
-    }
-
-    private void log(String level, String message) {
-        System.out.println(new Date() + "\t[" + loggerName + "]\t" + level + "\t\t: " + message);
-    }
-
-
-    public void debug (String message) {
-        if (logLevel <= DEBUG_MODE) {
-            log("DEBUG", message);
-        }
-    }
-
-    public void info (String message) {
-        if (logLevel <= INFO_MODE) {
-            log("INFO", message);
-        }
-    }
-
-    public void warn (String message) {
-        if (logLevel <= WARN_MODE) {
-            log("WARN", message);
-        }
-    }
-
-    public void error (String message) {
-        if (logLevel <= ERROR_MODE) {
-            log("ERROR", message);
-        }
-    }
-}
-
-
-/*
-import java.util.Date;
-
-public class CustomLogger {
-    public static final int DEBUG_MODE = 0;
-    public static final int INFO_MODE = 1;
-    public static final int WARN_MODE = 2;
-    public static final int ERROR_MODE = 3;
-
-    private final String loggerName;
-    private final int logLevel;
-
-    public CustomLogger(String loggerName, int logLevel) {
+    CustomLogger(String loggerName, int mode) {
         this.loggerName = loggerName;
-        this.logLevel = logLevel;
+        this.mode = mode;
     }
 
-    private void log(String level, String message) {
-        System.out.println(new Date() + "\t[" + loggerName + "]\t" + level + "\t\t: " + message);
-    }
-
-    public void debug(String message) {
-        if (logLevel <= DEBUG_MODE) {
-            log("DEBUG", message);
+    void debug(String message) {
+        if (mode <= DEBUG_MODE) {
+            System.out.println(loggerName + "\t" + "DEBUG\t" + message);
         }
     }
 
-    public void info(String message) {
-        if (logLevel <= INFO_MODE) {
-            log("INFO", message);
+    void info(String message) {
+        if (mode <= INFO_MODE) {
+            log(message, INFO_MODE);
         }
     }
 
-    public void warn(String message) {
-        if (logLevel <= WARN_MODE) {
-            log("WARN", message);
+    void warn(String message) {
+        if (mode <= WARN_MODE) {
+            log(message, WARN_MODE);
         }
     }
 
-    public void error(String message) {
-        if (logLevel <= ERROR_MODE) {
-            log("ERROR", message);
+    void error(String message) {
+        if (mode <= ERROR_MODE) {
+            log(message, ERROR_MODE);
         }
+    }
+
+    void log(String message, int mode) {
+        String modeName;
+        if (mode == DEBUG_MODE) {
+            modeName = "DEBUG";
+        } else if (mode == INFO_MODE) {
+            modeName = "INFO";
+        } else if (mode == WARN_MODE) {
+            modeName = "WARN";
+        } else if (mode == ERROR_MODE) {
+            modeName = "ERROR";
+        } else {
+            System.out.println("There is no such mode: " + mode);
+            return;
+        }
+
+        System.out.println(new Date() + "\t[" + loggerName + "]\t" + modeName + "\t: " + message);
     }
 }
- */

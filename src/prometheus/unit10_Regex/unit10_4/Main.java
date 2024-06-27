@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Main {
 
     /*
-    Define a pattern to validate mobile numbers by the format +380xxxxxxxxx.
+    Define test.b.a pattern to validate mobile numbers by the format +380xxxxxxxxx.
     Expected result:
             "+380123456789", "+380987654321" - should be valid;
             "1234567890", "+38812345" should be invalid.

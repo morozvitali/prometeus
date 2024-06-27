@@ -4,7 +4,7 @@
 Пропоную, стартовий код. Вам потрібно запропонувати частину, яка має бути додана замість “
 //PUT YOUR CODE HERE”
 
-public class Main {
+public class test.b.Main {
    public static void main(String[] args) {
        Country[] countries = new Country[]{
                new Country("Ukraine", 41_000_000, 603_700),

@@ -17,7 +17,7 @@ Element with number -3 equals -1Пропоную, стартовий код. В�
 
 import java.util.Scanner;
 
-public class Main {
+public class test.b.Main {
    public static void main(String[] args) {
        System.out.print("Please enter count of elements: ");
        Scanner scanner = new Scanner(System.in);

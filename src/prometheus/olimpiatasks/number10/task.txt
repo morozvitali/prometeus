@@ -18,16 +18,16 @@
     Має бути використаний виключно один System.out.println();
 
 Приклад виводу:
-Thu Dec 07 11:58:40 EET 2023	[Main class]	INFO		: info message
-Thu Dec 07 11:58:40 EET 2023	[Main class]	WARN		: warn message
-Thu Dec 07 11:58:40 EET 2023	[Main class]	ERROR	    : error message
+Thu Dec 07 11:58:40 EET 2023	[test.b.Main class]	INFO		: info message
+Thu Dec 07 11:58:40 EET 2023	[test.b.Main class]	WARN		: warn message
+Thu Dec 07 11:58:40 EET 2023	[test.b.Main class]	ERROR	    : error message
 Увага! Для виводу дати та часу можна скористатися об'єктом класу Date(new Date())!
 Пропоную, стартовий код. Вам потрібно запропонувати частину, яка має бути додана замість “
 //PUT YOUR CODE HERE”
 
-public class Main {
+public class test.b.Main {
    public static void main(String[] args) {
-       CustomLogger customLogger = new CustomLogger("Main class", CustomLogger.INFO_MODE);
+       CustomLogger customLogger = new CustomLogger("test.b.Main class", CustomLogger.INFO_MODE);
 
        customLogger.debug("debug message");
        customLogger.info("info message");

@@ -3,7 +3,7 @@
 
     Triangle:
 
-    Має містити поля a, b, c що відповідають сторонам трикутника;
+    Має містити поля test.b.a, test.b, c що відповідають сторонам трикутника;
     Не має містити жодних перевірок та додаткової логіки;
 
     TriangleService:
@@ -24,22 +24,22 @@
 
 Приклад роботи програми:
 
-Please enter size of side 'a': 0
-Triangle side should be a positive number, please try again:
-Please enter size of side 'a': -1
-Triangle side should be a positive number, please try again:
-Please enter size of side 'a': 3
-Please enter size of side 'b': 4
+Please enter size of side 'test.b.a': 0
+Triangle side should be test.b.a positive number, please try again:
+Please enter size of side 'test.b.a': -1
+Triangle side should be test.b.a positive number, please try again:
+Please enter size of side 'test.b.a': 3
+Please enter size of side 'test.b': 4
 Please enter size of side 'c': 9
 Each side should be less than sum of two others, please try again:
-Please enter size of side 'a': 3
-Please enter size of side 'b': 4
+Please enter size of side 'test.b.a': 3
+Please enter size of side 'test.b': 4
 Please enter size of side 'c': 5
-Area of triangle with side 'a' = 3.0, 'b' = 4.0, 'c' = 5.0 is 6.0
+Area of triangle with side 'test.b.a' = 3.0, 'test.b' = 4.0, 'c' = 5.0 is 6.0
 
 Пропоную, стартовий код. Вам потрібно запропонувати частину, яка має бути додана замість “ //PUT YOUR CODE HERE”
 
-public class Main {
+public class test.b.Main {
 
    public static void main(String[] args) {
        TriangleReader triangleReader = new TriangleReader();
@@ -48,7 +48,7 @@ public class Main {
        Triangle triangle = triangleReader.readTriangle();
        double area = triangleService.calculateArea(triangle);
 
-       System.out.println("Area of triangle with side 'a' = " + triangle.sideA + ", 'b' = " + triangle.sideB
+       System.out.println("Area of triangle with side 'test.b.a' = " + triangle.sideA + ", 'test.b' = " + triangle.sideB
                + ", 'c' = " + triangle.sideC + " is " + area);
    }
 }

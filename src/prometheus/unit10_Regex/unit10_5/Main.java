@@ -1,7 +1,7 @@
 package prometheus.unit10_Regex.unit10_5;
 
 /*
-Hello! We need the ability to add a new client by email address.
+Hello! We need the ability to add test.b.a new client by email address.
 It also should be validated to avoid fake or corrupted emails.
 
 VET CLINIC 2.2

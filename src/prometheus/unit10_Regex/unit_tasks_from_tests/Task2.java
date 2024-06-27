@@ -43,7 +43,7 @@ public class Task2 {
          import java.util.regex.Matcher;
          import java.util.regex.Pattern;
 
-public class Main {
+public class test.b.Main {
 
     public static void main(String[] args) {
         // PUT YOUR CODE HERE
